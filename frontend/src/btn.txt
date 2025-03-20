@@ -1,0 +1,361 @@
+.specialMenu-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.specialMenu-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.specialMenu-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.specialMenu-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.specialMenu-btn {
+  background: linear-gradient(135deg, var(--clr-primary-3), var(--clr-primary-3-hover));
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn:hover {
+  background: linear-gradient(135deg, var(--clr-primary-3-hover), var(--clr-primary-3));
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  color: var(--clr-white);
+}
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: var(--clr-black);
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.specialMenu-btn:hover::after {
+  width: 100%;
+}
+
+.specialMenu-btn:hover {
+  background-color: var(--clr-primary-3-hover);
+  color: var(--clr-white);
+}
+.specialMenu-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+  color: var(--clr-white);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn:hover {
+  border-color: var(--clr-white);
+  background-color: transparent;
+  color: var(--clr-white);
+}
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.specialMenu-btn:hover::before {
+  left: 100%;
+}
+
+.specialMenu-btn:hover {
+  background-color: var(--clr-primary-3-hover);
+  color: var(--clr-white);
+}
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  box-shadow: 0px 0px 5px var(--clr-primary-3);
+}
+
+.specialMenu-btn:hover {
+  background-color: var(--clr-primary-3-hover);
+  box-shadow: 0px 0px 15px var(--clr-primary-3-hover);
+  color: var(--clr-white);
+  transform: scale(1.1);
+}
+.specialMenu-btn {
+  background: linear-gradient(90deg, var(--clr-primary-3), var(--clr-primary-4));
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.5s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn:hover {
+  background: linear-gradient(90deg, var(--clr-primary-4), var(--clr-primary-3));
+  color: var(--clr-white);
+}
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.specialMenu-btn:hover {
+  border-color: var(--clr-white);
+  background-color: var(--clr-primary-3-hover);
+  color: var(--clr-white);
+  transform: rotate(3deg) scale(1.05);
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+}
+.specialMenu-btn {
+  background: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  overflow: hidden;
+}
+
+.specialMenu-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-4);
+  transition: all 0.4s ease-in-out;
+}
+
+.specialMenu-btn:hover::before {
+  left: 0;
+}
+
+.specialMenu-btn:hover {
+  color: var(--clr-white);
+}
+@keyframes flicker {
+  0% { box-shadow: 0 0 5px var(--clr-primary-3); }
+  50% { box-shadow: 0 0 15px var(--clr-primary-3-hover); }
+  100% { box-shadow: 0 0 5px var(--clr-primary-3); }
+}
+
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  transition: all 0.3s ease-in-out;
+}
+
+.specialMenu-btn:hover {
+  background-color: var(--clr-primary-3-hover);
+  color: var(--clr-white);
+  animation: flicker 0.5s infinite alternate;
+}
+.specialMenu-btn {
+  background-color: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.specialMenu-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-30deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.specialMenu-btn:hover::after {
+  left: 100%;
+}
+
+.specialMenu-btn:hover {
+  background-color: var(--clr-primary-3-hover);
+  color: var(--clr-white);
+}
+.specialMenu-btn {
+  background: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  transition: all 0.3s ease-in-out;
+}
+
+.specialMenu-btn::before,
+.specialMenu-btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--clr-white);
+  transition: all 0.4s ease-in-out;
+}
+
+.specialMenu-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.specialMenu-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.specialMenu-btn:hover::before,
+.specialMenu-btn:hover::after {
+  width: 100%;
+}
+
+.specialMenu-btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-primary-3-hover);
+}
