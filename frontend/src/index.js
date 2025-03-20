@@ -12,11 +12,13 @@ import {
 
 import HomePage from './components/HomePage';
 import MenuPage from './pages/MenuPage';
+import AboutUsPage from './pages/AboutUsPage';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomePage />} />
       <Route path='/menus' element={<MenuPage />} />
+      <Route path='/about-us' element={<AboutUsPage />} />
     </Route>
   )
 )

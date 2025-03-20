@@ -29,7 +29,8 @@ const Reservation = () => {
       <div className=' reservation'>
         <h2 className='reservation-title'>Online Reservation</h2>
         <h3>
-          Booking request <span>+88-123-123456</span> or fill out the order form
+          Booking request <span>+1 701-838-4337</span> or fill out the order
+          form
         </h3>
         <form className='reservation-form' onSubmit={handleSubmit}>
           <div className='reservation-form-group reservation-name-phone'>

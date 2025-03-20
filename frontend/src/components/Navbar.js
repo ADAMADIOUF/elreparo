@@ -17,7 +17,10 @@ const Navbar = () => {
         <button className='menu-btn' onClick={() => setMenuOpen(true)}>
           <FaBars />
         </button>
-        <img src={logo} className='logo' alt='Logo' />
+        <Link to={'/'}>
+          {' '}
+          <img src={logo} className='logo' alt='Logo' />
+        </Link>
         <button className='btn'>Find a Table</button>
       </div>
 
@@ -41,17 +44,17 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to='#about' onClick={closeMenu}>
+            <Link to='about-us' onClick={closeMenu}>
               About Us
             </Link>
           </li>
           <li>
-            <Link to='#chefs' onClick={closeMenu}>
+            <Link to='/chefs' onClick={closeMenu}>
               Our Chefs
             </Link>
           </li>
           <li>
-            <Link to='#contact' onClick={closeMenu}>
+            <Link to='/contact' onClick={closeMenu}>
               Contact
             </Link>
           </li>

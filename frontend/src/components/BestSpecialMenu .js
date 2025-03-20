@@ -62,7 +62,7 @@ const BestSpecialMenu = () => {
           <motion.img
             src={bg}
             alt='Special Offer'
-            className='bestspecialmenu-svg'
+            className='secondbanner-svg-image'
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}

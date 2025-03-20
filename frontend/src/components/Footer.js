@@ -1,12 +1,12 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 
-
+import logo from '../assets/logo.png'
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer-container'>
         <div className='footer-section'>
-          <h2 className='footer-logo'>El Reparo</h2>
+           <img src={logo} className='logo' alt='Logo' />
           <p className='footer-description'>
             Authentic Mexican flavors served with passion and tradition.
           </p>
@@ -44,13 +44,28 @@ const Footer = () => {
           <p className='footer-contact'>Phone: (701) 555-1234</p>
           <p className='footer-contact'>Email: info@elreparo.com</p>
           <div className='footer-social-icons'>
-            <a href='#' className='footer-social-icon'>
+            <a
+              href='https://www.facebook.com/p/El-Reparo-Mexican-GRILL-61550975976222/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='footer-social-icon'
+            >
               <FaFacebookF size={20} />
             </a>
-            <a href='#' className='footer-social-icon'>
+            <a
+              href='#'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='footer-social-icon'
+            >
               <FaInstagram size={20} />
             </a>
-            <a href='#' className='footer-social-icon'>
+            <a
+              href='#'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='footer-social-icon'
+            >
               <FaTwitter size={20} />
             </a>
           </div>

@@ -1,28 +1,31 @@
 import React, { useState, useEffect } from 'react'
-import { FaCalendarAlt } from 'react-icons/fa' // Importing an icon from react-icons
+import { Link } from 'react-router-dom' // Import Link from React Router
 
 const slides = [
   {
     image:
-      'https://lh3.googleusercontent.com/p/AF1QipM51tls0GtrJnZ5OlVRDULGzQa1a3r5ixLY0baq=s1360-w1360-h1020',
+      'https://i.pinimg.com/474x/e1/e6/cf/e1e6cf56f78cd75219d5bf881bc39f0a.jpg',
     title: 'Welcome to El Reparo!',
     description: 'Experience the best of Mexican Grill & Cantina.',
     buttonText: 'Explore Menu',
+    buttonLink: '/menus',
   },
   {
     image:
-      'https://files.oaiusercontent.com/file-LyjyCG9zmC8iYQsErYKBvs?se=2025-03-19T16%3A37%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df9b38357-d8ad-41ad-b164-d4641444d373.webp&sig=hPAj0aejlvlwwZf%2BMBuA%2BFN6hVCEIYm%2BS3a8DnZ4z2o%3D',
+      'https://i.pinimg.com/736x/fc/e2/2c/fce22ce7facd27eaf16ffeb881f5c5cc.jpg',
     title: 'Authentic Mexican Flavors',
     description: 'Fresh, vibrant, and flavorful dishes served daily.',
     buttonText: 'See Our Specials',
+    buttonLink: '/menus', // Specials page can also be under the menu
   },
   {
     image:
-      'https://files.oaiusercontent.com/file-YEDhQijhbW3jqiUfK3tvU2?se=2025-03-19T16%3A39%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D381cd7fa-1384-4156-b527-03dd7dca1d9f.webp&sig=0VWdM/5Y/NDkW%2B6GfgLezgXaNl%2BfUra1XZDm0mcwrVE%3D',
+      'https://i.pinimg.com/736x/96/0d/18/960d189c2b7f04ae0219b76a3d43133b.jpg',
     title: 'Enjoy Our Signature Margaritas',
     description:
       'Crafted with the finest ingredients for an unforgettable taste.',
     buttonText: 'Book a Table',
+    buttonLink: '/reservation',
   },
 ]
 
@@ -40,17 +43,17 @@ const SliderWithText = () => {
     <div className='slider'>
       <div className='slider-image'>
         <img src={slides[currentSlide].image} alt='Slider' />
+        <div className='slider-overlay'></div> {/* Overlay added here */}
       </div>
       <div className='text-container'>
         <h1 className='slide-title'>{slides[currentSlide].title}</h1>
         <p className='slide-description'>{slides[currentSlide].description}</p>
-        <button className='btn'>
+        <Link to={slides[currentSlide].buttonLink} className='btn'>
           {slides[currentSlide].buttonText}
-        </button>
+        </Link>
       </div>
     </div>
   )
 }
-
 
 export default SliderWithText

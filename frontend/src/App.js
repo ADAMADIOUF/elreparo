@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Outlet } from 'react-router-dom'
 import ClikButtonTop from './components/ClikButtonTop'
+import ScrollToTop from './components/ScrollToTop'
 const App = () => {
   return (
     <div>
@@ -12,7 +13,8 @@ const App = () => {
       <Navbar />
       <Outlet />
       <ClikButtonTop/>
-      {/* <Footer /> */}
+      <Footer />
+      <ScrollToTop/>
     </div>
   )
 }

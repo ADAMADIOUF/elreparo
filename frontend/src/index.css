@@ -258,38 +258,36 @@ p {
   cursor: pointer;
 }
 
-/* Logo styling */
+
 .logo {
-  max-width: 200px;  /* Set a maximum width for the logo */
-  width: 100%;  /* Ensures the logo is responsive */
-  height: auto;  /* Maintains aspect ratio */
+  max-width: 200px;  
+  width: 100%;  
+  height: auto; 
   display: block;
-  margin: 0 auto;  /* Centers the logo horizontally */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
+  margin: 0 auto;  
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Logo hover effect */
+
 .logo:hover {
-  transform: scale(1.1);  /* Slightly enlarges the logo on hover */
-  filter: brightness(1.2);  /* Makes the logo a bit brighter on hover */
+  transform: scale(1.1); 
+  filter: brightness(1.2);  
 }
-
-/* Optional: Add shadow effect */
 .logo {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow to the logo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
-/* Mobile menu styles */
+
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: -100%; /* Initially hidden off-screen */
+  left: -100%; 
   width: 80%;
   height: 100vh;
   background: var(--clr-primary-2);
   padding: 2rem;
-  transition: left 0.3s ease-in-out; /* Smooth transition */
+  transition: left 0.3s ease-in-out; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,7 +296,7 @@ p {
 }
 
 .mobile-menu.open {
-  left: 0; /* Slide in when the open class is added */
+  left: 0; 
 }
 
 .menu-header {
@@ -331,27 +329,24 @@ p {
 .mobile-menu ul li a:hover {
   color: var(--clr-primary-3);
 }
-/* Add keyframe animation */
 @keyframes moveLeftToRight {
   0% {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(10px); /* Adjust distance */
+    transform: translateX(10px); 
   }
   100% {
     transform: translateX(0);
   }
 }
-
-/* Apply animation to menu-btn */
 .menu-btn {
   background: none;
   border: none;
   color: var(--clr-white);
   font-size: 1.5rem;
   cursor: pointer;
-  animation: moveLeftToRight 2s ease-in-out infinite; /* 2s duration, ease-in-out timing function, infinite loop */
+  animation: moveLeftToRight 2s ease-in-out infinite;
 }
 
 
@@ -366,10 +361,21 @@ p {
 /* Styling for the image */
 .slider-image img {
   width: 100%;
-  height: 100%;
+  height: 100%; /* Ensure the image takes the full height */
   object-fit: cover;
   filter: brightness(60%);
   transition: all 0.3s ease-in-out;
+}
+
+/* Overlay for the image */
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 5; /* Ensure it sits above the image but below the text */
 }
 
 /* Text container styling */
@@ -380,7 +386,7 @@ p {
   transform: translateX(-50%);
   text-align: center;
   color: white;
-  z-index: 10;
+  z-index: 10; /* Ensure text is on top of the overlay */
 }
 
 /* Animation for Title (Left to Right) */
@@ -453,6 +459,7 @@ p {
 .slider-image img:hover {
   transform: scale(1.05);
 }
+
 /* FirstBanner */
 .first-banner {
   padding: 2rem 0;
@@ -689,16 +696,15 @@ p {
 
  
 }
-
-/* SecondBanner.css */
-.second-banner {
+/* SecondBanner */
+.secondbanner {
   padding: 4rem 0;
   background-color: var(--clr-primary-2);
   color: var(--clr-white);
   position: relative;
 }
 
-.second-banner-content {
+.secondbanner-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -708,48 +714,48 @@ p {
   padding: 0 1rem;
 }
 
-.story-content {
+.secondbanner-story-content {
   max-width: 500px;
 }
 
-.story-content h2 {
+.secondbanner-story-content h2 {
   font-size: 2rem;
 }
 
-.story-content h3 {
+.secondbanner-story-content h3 {
   font-size: 1.8rem;
   margin-top: 10px;
 }
 
-.story-content p {
+.secondbanner-story-content p {
   font-size: 1rem;
   color: #ccc;
   margin-top: 10px;
   line-height: 1.6;
 }
 
-.call-info {
+.secondbanner-call-info {
   margin-top: 20px;
   font-size: 1.2rem;
 }
 
-.buttons-container {
+.secondbanner-buttons-container {
   margin-top: 20px;
 }
 
-.image-section {
+.secondbanner-image-section {
   position: relative;
   width: 450px;
   height: 300px;
 }
 
-.story-image {
+.secondbanner-story-image {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.image-one {
+.secondbanner-image-one {
   position: absolute;
   top: 0;
   left: 0;
@@ -757,7 +763,7 @@ p {
   z-index: 1;
 }
 
-.image-two {
+.secondbanner-image-two {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -768,30 +774,31 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .second-banner-content {
+  .secondbanner-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .story-content {
+  .secondbanner-story-content {
     max-width: 100%;
   }
 
-  .image-section {
+  .secondbanner-image-section {
     width: 100%;
     height: auto;
     position: relative;
   }
 
-  .image-one,
-  .image-two {
+  .secondbanner-image-one,
+  .secondbanner-image-two {
     width: 45%;
     position: relative;
     display: block;
     margin: 0 auto;
   }
 }
-.circle-text {
+
+.secondbanner-circle-text {
   width: 150px; 
   height: 150px;
   fill: var(--clr-primary-3); 
@@ -806,7 +813,7 @@ p {
   
 }
 
-.center-text {
+.secondbanner-center-text {
   font-size: 1.5rem;
   font-weight: bold;
   fill: var(--clr-white);
@@ -820,6 +827,10 @@ p {
   100% {
     transform: rotate(360deg);
   }
+}
+.secondbanner-svg-image{
+  width: 20%;
+  margin-top: 2rem;
 }
 /* ThirdBanner */
 .third-banner {
@@ -851,7 +862,7 @@ p {
 
 .text-section p {
   font-size: 1rem;
-  color: #666;
+  color:var(--clr-white);
   margin-bottom: 20px;
 }
 
@@ -1630,13 +1641,12 @@ p {
   transform: scale(1.2);
   color: #e4c690; /* Hover color for icons */
 }
-/* BannerLastMenu */
 .banner-last-menu {
   padding: 50px;
   background-color: var(--clr-primary-1);
 }
 
-.menu-container {
+.banner-last-menu-container {
   display: grid;
   grid-template-columns: 1fr; 
   gap: 30px;
@@ -1644,12 +1654,12 @@ p {
 
 /* Two-column layout for larger screens */
 @media (min-width: 1024px) {
-  .menu-container {
+  .banner-last-menu-container {
     grid-template-columns: 1fr 1fr; 
   }
 }
 
-.menu-column {
+.banner-last-menu-column {
   display: grid;
   grid-template-rows: repeat(3, auto); 
   gap: 20px;
@@ -1657,13 +1667,12 @@ p {
 
 /* Mobile Layout: Stack into one column */
 @media (max-width: 768px) {
-  .menu-container {
-    grid-template-columns: 1fr; /* Single column for mobile */
+  .banner-last-menu-container {
+    grid-template-columns: 1fr; 
   }
 }
 
-/* Menu Item Styles */
-.menu-item {
+.banner-last-menu-item {
   background-color: var(--clr-black);
   border-radius: 10px;
   padding: 20px;
@@ -1673,24 +1682,24 @@ p {
 }
 
 /* Title Styling */
-.menu-title {
+.banner-last-menu-title {
   font-size: 1.8rem;
   color: var(--clr-white);
 }
 
-.menu-description {
+.banner-last-menu-description {
   font-size: 1.2rem;
   color: var(--clr-white);
 }
 
-.menu-text {
+.banner-last-menu-text {
   font-size: 1rem;
   color: var(--clr-white);
   margin-bottom: 15px;
 }
 
 /* Buttons */
-.view-menu, .join-event {
+.banner-last-menu-view, .banner-last-menu-event {
   display: inline-block;
   font-size: 1rem;
   color: #E4C690;
@@ -1701,17 +1710,17 @@ p {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.view-menu:hover, .join-event:hover {
+.banner-last-menu-view:hover, .banner-last-menu-event:hover {
   background-color: #E4C690;
   color: #fff;
 }
 
 /* Images */
-.img-item {
+.banner-last-menu-img-item {
   position: relative;
 }
 
-.menu-img {
+.banner-last-menu-img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -1720,7 +1729,7 @@ p {
 }
 
 /* Hover Animation */
-.img-overlay {
+.banner-last-menu-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1732,15 +1741,16 @@ p {
   transition: opacity 0.3s ease;
 }
 
-.img-item:hover .menu-img {
+.banner-last-menu-img-item:hover .banner-last-menu-img {
   transform: scale(1.05);
 }
 
-.img-item:hover .img-overlay {
+.banner-last-menu-img-item:hover .banner-last-menu-overlay {
   opacity: 1;
 }
+
 /* OurChef */
-/* Our Chef Section */
+
 .our-chef {
   padding: 50px 20px;
   text-align: center;
@@ -2098,7 +2108,6 @@ p {
   }
 }
 /* MenuPage */
-/* MenuPage.css */
 .menu-container {
   display: flex;
   flex-direction: column;
@@ -2116,6 +2125,7 @@ p {
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
+  color: var(--clr-primary-3) !important;
 }
 
 .menu-item {
@@ -2195,11 +2205,229 @@ p {
 .menu-item-price {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e44d26;
+  color: var(--clr-primary-3);
   margin-bottom: 8px;
 }
 
 .menu-item-description {
   font-size: 1rem;
   color: #666;
+}
+/* AboutPage */
+.about-us-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Who We Are Section */
+.who-we-are {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.svg-container {
+  flex: 1;
+  text-align: center;
+}
+
+.my-svg-image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.who-we-are-text {
+  flex: 1;
+}
+
+.who-we-are-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.who-we-are-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Three-Row Layout */
+.three-row-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Founder Section */
+.founder-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.founder-text {
+  flex: 1;
+}
+
+.founder-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.founder-text p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.founder-media {
+  flex: 1;
+  text-align: center;
+}
+
+.founder-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.video-popup-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Restaurant Info Section */
+.restaurant-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #333;
+  position: relative;
+}
+
+.restaurant-info::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #666;
+  z-index: -1;
+}
+
+.info-box {
+  text-align: center;
+}
+
+/* Video Popup Modal */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  background: #000;
+}
+
+.close-video {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .who-we-are,
+  .founder-section,
+  .restaurant-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .restaurant-info {
+    border: none;
+  }
+
+  .restaurant-info::before {
+    display: none;
+  }
+
+  .video-content {
+    width: 90%;
+    height: 300px;
+  }
+}
+/* Statistics Section */
+.statistics-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+  padding: 3rem;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+}
+
+.stat-box p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .who-we-are, 
+  .founder-section, 
+  .restaurant-info, 
+  .statistics-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .restaurant-info {
+    gap: 1rem;
+  }
+
+  .statistics-section {
+    gap: 2rem;
+  }
 }

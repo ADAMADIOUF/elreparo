@@ -11,13 +11,16 @@ const ContactHome = () => {
             <h3>Booking Request</h3>
             <p>
               {' '}
-              <span>+88-123-123456</span>
+              <span>+1 701-838-4337</span>
             </p>
           </div>
 
           <div className='contact-item'>
             <h3>Location</h3>
-            <p>Restaurant St, Delicious City, London 9578, UK</p>
+            <p>
+              El Reparo Mexican Grill & Cantina, 1735 S Broadway, Minot, ND
+              58701
+            </p>
           </div>
 
           <div className='contact-item'>

@@ -86,7 +86,11 @@ const SpecialMenu = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              <img src={bg} alt='SVG Image' className='my-svg-image' />
+              <img
+                src={bg}
+                alt='SVG Image'
+                className='secondbanner-svg-image'
+              />
             </motion.div>
           </div>
 

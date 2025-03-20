@@ -1,17 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import bg2 from '../assets/bg3.png'
 import bg from '../assets/bg1.svg'
-import imageOne from '../assets/imageOne.jpg' // Replace with actual image path
-import imageTwo from '../assets/imageTwo.jpg' // Replace with actual image path
-import firstbanner from '../assets/first.png'
-import secondbanner from '../assets/second.png'
+import imageOne from '../assets/imageOne.jpg'
+import imageTwo from '../assets/imageTwo.jpg'
+
 const SecondBanner = () => {
   return (
-    <section className='second-banner'>
-      <div className='section-center second-banner-content'>
-        {/* First Part: Text Section */}
-        <div className='story-content'>
+    <section className='secondbanner'>
+      <div className='secondbanner-content'>
+        <div className='secondbanner-story-content'>
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -19,9 +16,9 @@ const SecondBanner = () => {
           >
             Our Story
           </motion.h2>
-          <img src={bg} alt='SVG Image' className='my-svg-image' />
+          <img src={bg} alt='SVG Image' className='secondbanner-svg-image' />
           <motion.div
-            className='svg-container'
+            className='secondbanner-svg-container'
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
@@ -40,40 +37,43 @@ const SecondBanner = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+            El Reparo Mexican Grill is an authentic Mexican restaurant, founded
+            and run by a family originally from Puerto Vallarta, Jalisco,
+            Mexico. Our passion for food and tradition brings you a variety of
+            delicious, authentic Mexican dishes and tropical cocktails made with
+            fresh ingredients. More than just a restaurant, we offer a 100%
+            family-friendly atmosphere, where great food meets entertainment.
+            Whether you’re here for a casual dinner, a celebration, or just to
+            enjoy a refreshing margarita, we promise an experience filled with
+            flavors, warmth, and culture. Join us and taste the tradition!
           </motion.p>
 
           <motion.div
-            className='call-info'
+            className='secondbanner-call-info'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9 }}
           >
             <h4>Book Through Call</h4>
-            <p>+80 (400) 123 4567</p>
+            <p>+1 701-838-4337</p>
           </motion.div>
 
           <motion.div
-            className='buttons-container'
+            className='secondbanner-buttons-container'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            <a href='#read-more' className='btn'>
+            <a href='#read-more' className='secondbanner-btn btn'>
               Read More
             </a>
           </motion.div>
         </div>
-
-        {/* Second Part: Overlapping Images */}
-        <div className='image-section'>
+        <div className='secondbanner-image-section'>
           <motion.img
             src={imageOne}
             alt='Story Image One'
-            className='story-image image-one'
+            className='secondbanner-story-image secondbanner-image-one'
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -81,22 +81,21 @@ const SecondBanner = () => {
           <motion.img
             src={imageTwo}
             alt='Story Image Two'
-            className='story-image image-two'
+            className='secondbanner-story-image secondbanner-image-two'
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           />
         </div>
-        
       </div>
-      <svg viewBox='0 0 200 200' className='circle-text'>
+      <svg viewBox='0 0 200 200' className='secondbanner-circle-text'>
         <path
-          id='circlePath'
+          id='secondbanner-circlePath'
           d='M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0'
         />
 
         <text>
-          <textPath href='#circlePath' startOffset='0%'>
+          <textPath href='#secondbanner-circlePath' startOffset='0%'>
             QUALITÉ RESTAURANT • El Reparo Mexican Grill & Cantina •
           </textPath>
         </text>
@@ -104,14 +103,13 @@ const SecondBanner = () => {
         <text
           x='50%'
           y='50%'
-          className='center-text'
+          className='secondbanner-center-text'
           dominantBaseline='middle'
           textAnchor='middle'
         >
           Since 2024
         </text>
       </svg>
-      
     </section>
   )
 }
