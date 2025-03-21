@@ -2,62 +2,33 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import bg from '../assets/bg1.svg'
 import bar from '../assets/bar.png'
-
-
-const menuItems = [
-  {
-    name: 'Greek Salad',
-    price: '$39.00',
-    description:
-      'Avocados with crab meat, red onion, crab salad red bell pepper...',
-    image:
-      'https://react.mediacity.co.in/delici/static/media/menu-image-13.def913c8d8e23413a075.jpg',
-  },
-  {
-    name: 'Tokusen Wagyu',
-    price: '$45.00',
-    description:
-      'Tomatoes, green bell pepper, sliced cucumber onion, olives...',
-    image:
-      'https://react.mediacity.co.in/delici/static/media/menu-image-14.cc993aeb8cae1e7c3ae7.jpg',
-  },
-  {
-    name: 'Butternut Pumpkin',
-    price: '$15.00',
-    description:
-      'Avocados with crab meat, red onion, crab salad stuffed bell pepper...',
-    image:
-      'https://react.mediacity.co.in/delici/static/media/menu-image-11.7be629d8a04827b964cc.jpg',
-  },
-  {
-    name: 'Opu Fish',
-    price: '$12.00',
-    description:
-      'Vegetables, cheeses, ground meats, tomato sauce, seasonings...',
-    image:
-      'https://react.mediacity.co.in/delici/static/media/menu-image-12.d21e54a8cc34de459bc8.jpg',
-  },
-    
-]
+import { Link } from 'react-router-dom'
+import productsMenu from '../productsMenu' // Import productsMenu
 
 const BestSpecialMenu = () => {
+  const allItems = Object.values(productsMenu).flat() // Convert productsMenu object into a single array
   const [index, setIndex] = useState(0)
 
+  const itemsPerPage = 4 // Show only 4 items at a time
+
   const nextSlide = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % menuItems.length)
+    setIndex((prevIndex) => (prevIndex + itemsPerPage) % allItems.length)
   }
 
   const prevSlide = () => {
     setIndex(
-      (prevIndex) => (prevIndex - 1 + menuItems.length) % menuItems.length
+      (prevIndex) =>
+        (prevIndex - itemsPerPage + allItems.length) % allItems.length
     )
   }
 
+  const visibleItems = allItems.slice(index, index + itemsPerPage)
+
   return (
-    <section className='bestspecialmenu-container '>
+    <section className='bestspecialmenu-container'>
       <div className='section-center best-special'>
         <div className='bestspecialmenu-header'>
-          <h2>special offer</h2>
+          <h2>Special Offer</h2>
 
           <motion.img
             src={bg}
@@ -75,17 +46,12 @@ const BestSpecialMenu = () => {
           </button>
 
           <div className='bestspecialmenu-items'>
-            {menuItems.map((item, i) => (
+            {visibleItems.map((item, i) => (
               <motion.div
                 key={i}
-                className={`bestspecialmenu-item ${
-                  i === index ? 'active' : ''
-                }`}
+                className='bestspecialmenu-item'
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{
-                  opacity: i === index ? 1 : 0.5,
-                  scale: i === index ? 1 : 0.8,
-                }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
                 <img
@@ -95,7 +61,9 @@ const BestSpecialMenu = () => {
                 />
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                <span className='bestspecialmenu-price'>{item.price}</span>
+                <span className='bestspecialmenu-price'>
+                  ${item.price.toFixed(2)}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -104,7 +72,9 @@ const BestSpecialMenu = () => {
             ❯
           </button>
         </div>
-        <button className='btn special-btn'>View All Menu</button>
+        <Link to='/menus'>
+          <button className='btn special-btn'>View All Menu</button>
+        </Link>
       </div>
       <div className='bar-img'>
         <img src={bar} alt='' />

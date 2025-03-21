@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom' // Import Link from React Router
+import { Link } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const slides = [
   {
     image:
-      'https://i.pinimg.com/474x/e1/e6/cf/e1e6cf56f78cd75219d5bf881bc39f0a.jpg',
+      'https://i.pinimg.com/736x/77/02/10/770210663f41df2b873f18f7f9113a53.jpg',
     title: 'Welcome to El Reparo!',
     description: 'Experience the best of Mexican Grill & Cantina.',
     buttonText: 'Explore Menu',
@@ -12,7 +13,7 @@ const slides = [
   },
   {
     image:
-      'https://i.pinimg.com/736x/fc/e2/2c/fce22ce7facd27eaf16ffeb881f5c5cc.jpg',
+      'https://i.pinimg.com/736x/cd/7c/2b/cd7c2b6938c17998c8c56939a9b0c4db.jpg',
     title: 'Authentic Mexican Flavors',
     description: 'Fresh, vibrant, and flavorful dishes served daily.',
     buttonText: 'See Our Specials',
@@ -20,10 +21,10 @@ const slides = [
   },
   {
     image:
-      'https://i.pinimg.com/736x/96/0d/18/960d189c2b7f04ae0219b76a3d43133b.jpg',
-    title: 'Enjoy Our Signature Margaritas',
+      'https://i.pinimg.com/736x/32/d8/5c/32d85ce21ababbe7085d2e956711fa10.jpg',
+    title: 'A Fiesta of Flavors – Fresh, Bold, and Authentic!',
     description:
-      'Crafted with the finest ingredients for an unforgettable taste.',
+      'Experience the heart of Mexico on every plate! From zesty limes to aromatic parsley and fiery peppers, our dishes are crafted with fresh ingredients and bold flavors. Join us for a feast that ignites your taste buds and celebrates tradition in every bite.',
     buttonText: 'Book a Table',
     buttonLink: '/reservation',
   },
@@ -41,17 +42,48 @@ const SliderWithText = () => {
 
   return (
     <div className='slider'>
-      <div className='slider-image'>
-        <img src={slides[currentSlide].image} alt='Slider' />
-        <div className='slider-overlay'></div> {/* Overlay added here */}
-      </div>
-      <div className='text-container'>
-        <h1 className='slide-title'>{slides[currentSlide].title}</h1>
-        <p className='slide-description'>{slides[currentSlide].description}</p>
-        <Link to={slides[currentSlide].buttonLink} className='btn'>
-          {slides[currentSlide].buttonText}
-        </Link>
-      </div>
+      <AnimatePresence mode='wait'>
+        <motion.div
+          key={currentSlide} // Key ensures each slide is treated uniquely
+          className='slider-wrapper'
+          initial={{ opacity: 0, x: 100 }} // Starts from the right
+          animate={{ opacity: 1, x: 0 }} // Moves to center smoothly
+          exit={{ opacity: 0, x: -100 }} // Exits to the left
+          transition={{ duration: 1, ease: 'easeInOut' }} // Smooth transition
+        >
+          <div className='slider-image'>
+            <img src={slides[currentSlide].image} alt='Slider' />
+            <div className='slider-overlay'></div> {/* Overlay added */}
+          </div>
+          <div className='text-container'>
+            <motion.h1
+              className='slide-title'
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: 'easeOut' }}
+            >
+              {slides[currentSlide].title}
+            </motion.h1>
+            <motion.p
+              className='slide-description'
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+            >
+              {slides[currentSlide].description}
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link to={slides[currentSlide].buttonLink} className='btn'>
+                {slides[currentSlide].buttonText}
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   )
 }

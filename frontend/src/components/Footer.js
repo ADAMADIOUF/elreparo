@@ -1,12 +1,13 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer-container'>
         <div className='footer-section'>
-           <img src={logo} className='logo' alt='Logo' />
+          <img src={logo} className='logo' alt='Logo' />
           <p className='footer-description'>
             Authentic Mexican flavors served with passion and tradition.
           </p>
@@ -16,24 +17,34 @@ const Footer = () => {
           <h3 className='footer-links-title'>Quick Links</h3>
           <ul className='footer-links'>
             <li>
-              <a href='/' className='footer-link'>
+              <Link to='/' className='footer-link'>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/menu' className='footer-link'>
+              <Link to='/menus' className='footer-link'>
                 Menu
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/about' className='footer-link'>
+              <Link to='/about-us' className='footer-link'>
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/contact' className='footer-link'>
+              <Link to='/chefs' className='footer-link'>
+                Our Chefs
+              </Link>
+            </li>
+            <li>
+              <Link to='/reservation' className='footer-link'>
+                Reservation
+              </Link>
+            </li>
+            <li>
+              <Link to='/contact' className='footer-link'>
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import { FaPlay } from 'react-icons/fa'
 import bg from '../assets/bg1.svg'
 
-
-
 const LastBanner = () => {
   const [showVideo, setShowVideo] = useState(false)
 
@@ -19,7 +17,7 @@ const LastBanner = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <img src={bg} alt='SVG Image' className='my-svg-image' />
+          <img src={bg} alt='SVG Image' className='secondbanner-svg-image' />
         </motion.div>
 
         <p className='banner-description'>
@@ -27,12 +25,30 @@ const LastBanner = () => {
         </p>
         <p className='chef-name'>- Willium Joe, Master Chef</p>
 
-        {/* Animated Video Button */}
+        {/* Play Button with Fire-like Animation */}
         <motion.button
           className='watch-video'
           onClick={() => setShowVideo(true)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{
+            scale: 1.2, // Button grows on hover
+            rotate: 360, // Adds rotation
+            boxShadow: '0 0 15px rgba(255, 0, 0, 0.5)', // Fire glow effect
+            backgroundColor: '#ff5733', // Fire color effect
+            transition: { duration: 0.3 },
+          }}
+          whileTap={{
+            scale: 0.9, // Button shrinks on click
+            rotate: 0, // Reset rotation
+            transition: { duration: 0.2 },
+          }}
+          style={{
+            borderRadius: '50%', // Rounded button
+            padding: '15px',
+            border: 'none',
+            backgroundColor: '#ff7f50', // Base fire color
+            color: 'white',
+            cursor: 'pointer',
+          }}
         >
           <FaPlay className='play-icon' />
         </motion.button>
@@ -59,10 +75,8 @@ const LastBanner = () => {
               allowFullScreen
             ></iframe>
           </div>
-         
         </motion.div>
       )}
-      
     </section>
   )
 }

@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import HeroSection from '../components/HeroSection'
 import { motion } from 'framer-motion'
 import bg from '../assets/bg1.svg'
-
+import AboutTwo from './AboutTwo'
+import Services from './Services'
+import AboutBanner from './AboutBanner'
+import WhyChooseUs from "../components/WhyChooseUs"
 const AboutUsPage = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
 
@@ -21,6 +24,7 @@ const AboutUsPage = () => {
         description='Experience the warmth of family, tradition, and authentic Mexican cuisine. Our passion is to bring the flavors of Puerto Vallarta, Jalisco, to your table with fresh ingredients, vibrant dishes, and a welcoming atmosphere.'
         backgroundImage='https://i.pinimg.com/474x/e3/84/41/e38441da0e92391e31dc1d9d6f58c872.jpg'
       />
+
       <div className='about-us-container'>
         {/* Who We Are Section */}
         <section className='who-we-are'>
@@ -30,14 +34,23 @@ const AboutUsPage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <img src={bg} alt='SVG Image' className='my-svg-image' />
+            <img src={bg} alt='SVG Background' className='my-svg-image' />
           </motion.div>
           <div className='who-we-are-text'>
             <h2>Who We Are</h2>
             <p>
-              A modern restaurant with a menu that will make your mouth water.
-              Serving delicious food for over 45 years. Enjoy our seasonal menu
-              and experience the beauty of naturalness.
+              At El Reparo Mexican Grill & Cantina, we bring the heart and soul
+              of authentic Mexican cuisine to your table. Inspired by the rich
+              culinary traditions of Puerto Vallarta, Jalisco, our restaurant is
+              a place where flavor, tradition, and hospitality come together.
+              For over 15 years, we've been serving fresh, flavorful, and
+              homemade dishes crafted with the finest ingredients. From sizzling
+              fajitas and zesty tacos to handcrafted margaritas, every bite is a
+              taste of Mexico’s vibrant culture. Whether you’re here for a
+              casual meal, a family gathering, or a special celebration, we
+              invite you to enjoy a warm atmosphere, friendly service, and an
+              unforgettable dining experience. Welcome to El Reparo – where
+              every meal is a fiesta! 🎉🌮🍹
             </p>
           </div>
         </section>
@@ -47,12 +60,16 @@ const AboutUsPage = () => {
           {/* Row 1: Founder Section with Video Popup */}
           <section className='founder-section'>
             <div className='founder-text'>
-              <h3>Andrew Joe - Founder</h3>
+              <h3>Puerto Vallarta & Jalisco, Mexico, - Founder</h3>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. It has been the industry's standard dummy text ever
-                since the unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
+                El Reparo Mexican Grill & Cantina is a family-owned restaurant
+                specializing in authentic Mexican cuisine. The family hails from
+                Puerto Vallarta, Jalisco, Mexico, bringing their rich culinary
+                traditions to the establishment. Specific details about the
+                founder's identity are not readily available in the provided
+                sources. However, the restaurant has been serving delicious
+                Mexican food for over 15 years, emphasizing its commitment to
+                quality and tradition.
               </p>
             </div>
             <div className='founder-media'>
@@ -100,14 +117,17 @@ const AboutUsPage = () => {
             </div>
             <div className='info-box'>
               <h3>Contact Us</h3>
-              <p>Restaurant St, Delicious City, London 9578, UK</p>
-              <p>+88-123-123456</p>
-              <p>reservation@restro.com</p>
+              <p>
+                El Reparo Mexican Grill & Cantina, 1735 S Broadway, Minot, ND
+                58701
+              </p>
+              <p>+1 701-838-4337</p>
+              <p>Elreparond@yahoo.com</p>
             </div>
           </section>
         </div>
 
-        {/* Statistics Section (Now at the Bottom) */}
+        {/* Statistics Section */}
         <section className='statistics-section'>
           <div className='stat-box'>
             <h3>150+</h3>
@@ -126,7 +146,11 @@ const AboutUsPage = () => {
             <p>Awards Won</p>
           </div>
         </section>
+        <AboutTwo />
+        <Services />
       </div>
+      <AboutBanner />
+      <WhyChooseUs/>
     </>
   )
 }

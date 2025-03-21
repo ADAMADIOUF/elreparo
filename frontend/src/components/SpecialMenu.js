@@ -4,52 +4,11 @@ import bg from '../assets/bg1.svg'
 import fithbanner from '../assets/fith.png'
 import fourbanner from '../assets/four.png'
 import thirdbanner from '../assets/third.png'
-const menuItems = [
-  {
-    name: 'Greek Salad',
-    price: '$25.50',
-    description:
-      'Tomatoes, green bell pepper, sliced cucumber, onion, olives, and feta cheese.',
-    tag: 'LUNCH',
-  },
-  {
-    name: 'Lasagne',
-    price: '$40.00',
-    description:
-      'Vegetables, cheeses, ground meats, tomato sauce, seasonings, and spices.',
-    tag: 'DINNER',
-    badge: 'SEASONAL',
-  },
-  {
-    name: 'Butternut Pumpkin',
-    price: '$10.00',
-    description:
-      'Typesetting industry lorem Ipsum is simply dummy text of the priand.',
-    tag: 'MORNING',
-  },
-  {
-    name: 'Tokusen Wagyu',
-    price: '$39.00',
-    description:
-      'Vegetables, cheeses, ground meats, tomato sauce, seasonings, and spices.',
-    tag: 'DINNER',
-    badge: 'NEW',
-  },
-  {
-    name: 'Olivas Rellenas',
-    price: '$25.00',
-    description:
-      'Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.',
-    tag: 'LUNCH',
-  },
-  {
-    name: 'Opu Fish',
-    price: '$49.00',
-    description:
-      'Vegetables, cheeses, ground meats, tomato sauce, seasonings, and spices.',
-    tag: 'DINNER',
-  },
-]
+import productsMenu from '../productsMenu' 
+import { Link } from 'react-router-dom'
+const allMenuItems = Object.entries(productsMenu).flatMap(([category, items]) =>
+  items.map((item) => ({ ...item, category }))
+)
 
 const SpecialMenu = () => {
   const [filter, setFilter] = useState('ALL')
@@ -60,8 +19,8 @@ const SpecialMenu = () => {
 
   const filteredItems =
     filter === 'ALL'
-      ? menuItems
-      : menuItems.filter((item) => item.tag === filter)
+      ? allMenuItems
+      : allMenuItems.filter((item) => item.category === filter)
 
   return (
     <section className='specialMenu-container'>
@@ -102,21 +61,19 @@ const SpecialMenu = () => {
               transition={{ duration: 1 }}
             >
               <img
-                src='https://lh3.googleusercontent.com/p/AF1QipPWGpDMl9Rp2lw1dCmYufEnl4ZNeOQiIuS5BS6H=s1360-w1360-h1020'
+                src='https://i.pinimg.com/736x/26/77/1a/26771a2b50866590f2f9edb75bdd4216.jpg'
                 alt='Special Menu'
                 className='specialMenu-svgImage'
               />
             </motion.div>
-
-            {/* Filter Tags */}
             <div className='specialMenu-tags'>
-              {['ALL', 'MORNING', 'LUNCH', 'DINNER'].map((tag) => (
+              {['ALL', ...Object.keys(productsMenu)].map((tag) => (
                 <span
                   key={tag}
                   className={filter === tag ? 'active' : ''}
                   onClick={() => handleFilterClick(tag)}
                 >
-                  {tag}
+                  {tag.toUpperCase()}
                 </span>
               ))}
             </div>
@@ -129,23 +86,19 @@ const SpecialMenu = () => {
                 {filteredItems.map((item, index) => (
                   <div key={index} className='specialMenu-menuItem'>
                     <div className='specialMenu-menuItemLeft'>
-                      <h4>
-                        {item.name}{' '}
-                        {item.badge && (
-                          <span className='specialMenu-badge'>
-                            {item.badge}
-                          </span>
-                        )}
-                      </h4>
+                      <h4>{item.name}</h4>
                       <p>{item.description}</p>
                     </div>
-                    <span className='specialMenu-price'>{item.price}</span>
+                    <span className='specialMenu-price'>${item.price}</span>
                   </div>
                 ))}
               </div>
 
               <div className='specialMenu-buttons'>
-                <button className='btn'>View All Menu</button>
+                <Link to={'/menus'}>
+                  {' '}
+                  <button className='btn'>View All Menu</button>
+                </Link>
               </div>
             </div>
           </div>

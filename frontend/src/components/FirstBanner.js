@@ -5,6 +5,7 @@ import bg from '../assets/bg1.svg'
 import bg2 from '../assets/bg3.png'
 import firstbanner from '../assets/first.png'
 import secondbanner from '../assets/second.png'
+import { Link } from 'react-router-dom'
 
 const FirstBanner = () => {
   return (
@@ -54,9 +55,9 @@ const FirstBanner = () => {
             >
               Breakfast
             </motion.h3>
-            <a href='#breakfast-menu' className='first-baner-view-menu'>
+            <Link to='/breakfast-menu' className='first-baner-view-menu'>
               View Menu
-            </a>
+            </Link>
           </div>
           <div className='first-baner-menu-item'>
             <motion.h3
@@ -66,9 +67,9 @@ const FirstBanner = () => {
             >
               Appetizers
             </motion.h3>
-            <a href='#appetizers-menu' className='first-baner-view-menu'>
+            <Link to='/appetizers-menu' className='first-baner-view-menu'>
               View Menu
-            </a>
+            </Link>
           </div>
           <div className='first-baner-menu-item'>
             <motion.h3
@@ -78,9 +79,9 @@ const FirstBanner = () => {
             >
               Drinks
             </motion.h3>
-            <a href='#drinks-menu' className='first-baner-view-menu'>
+            <Link to='/drinks-menu' className='first-baner-view-menu'>
               View Menu
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -95,7 +96,7 @@ const FirstBanner = () => {
               transition={{ duration: 1 }}
             />
             <motion.img
-              src='https://react.mediacity.co.in/delici/static/media/offer-image-1.c020474aea0ed9a09d2a.jpg'
+              src='https://i.pinimg.com/474x/e5/40/14/e54014f0255269a4a9014b7fa3911f09.jpg'
               alt='First Image'
               className='gallery-img large-height hover-effect'
               initial={{ opacity: 0 }}
@@ -121,7 +122,7 @@ const FirstBanner = () => {
               transition={{ duration: 1, delay: 1.5 }}
             />
             <motion.img
-              src='https://react.mediacity.co.in/delici/static/media/offer-image-2.d655d2ba6f4b2c6f7ac9.jpg'
+              src='https://i.pinimg.com/736x/60/7e/b2/607eb272e2c7806bb4803625d04ea607.jpg'
               alt='Middle Image'
               className='gallery-img medium-height hover-effect'
               initial={{ opacity: 0 }}
@@ -147,7 +148,7 @@ const FirstBanner = () => {
               transition={{ duration: 1, delay: 3 }}
             />
             <motion.img
-              src='https://react.mediacity.co.in/delici/static/media/offer-image-3.2220579532c7ff25ef9c.jpg'
+              src='https://i.pinimg.com/736x/35/c7/de/35c7de3c6848ed6aa98e634fa8925bf3.jpg'
               alt='Last Image'
               className='gallery-img large-height hover-effect'
               initial={{ opacity: 0 }}

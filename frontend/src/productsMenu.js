@@ -33,6 +33,50 @@ const productsMenu = {
         'https://i.pinimg.com/474x/ea/44/01/ea44017d26a2222832e12464fcfa7209.jpg',
     },
   ],
+  tacos: [
+    {
+      name: 'Carne Asada Tacos',
+      price: 14.5,
+      description:
+        'Grilled steak tacos served on soft corn tortillas with fresh cilantro, onions, and salsa verde.',
+      image:
+        'https://i.pinimg.com/474x/31/23/71/312371176f350d2c0700ad12adcd4f84.jpg',
+    },
+    {
+      name: 'Al Pastor Tacos',
+      price: 13.75,
+      description:
+        'Marinated pork tacos topped with fresh pineapple, onions, and cilantro on soft corn tortillas.',
+      image:
+        'https://i.pinimg.com/474x/06/7b/ac/067bac5fa3094e850b8d9ef3feca736d.jpg',
+    },
+    {
+      name: 'Baja Shrimp Tacos',
+      price: 16.0,
+      description:
+        'Crispy fried shrimp tacos topped with cabbage slaw and chipotle mayo on soft tortillas.',
+      image:
+        'https://i.pinimg.com/736x/39/36/a1/3936a1cf8e83cdeeaebd427444877139.jpg',
+    },
+  ],
+  burritos: [
+    {
+      name: 'California Burrito',
+      price: 13.5,
+      description:
+        'Grilled steak, crispy French fries, cheese, guacamole, and sour cream wrapped in a large flour tortilla.',
+      image:
+        'https://i.pinimg.com/474x/3c/c6/f9/3cc6f95254bf052f0726eb9965a72483.jpg',
+    },
+    {
+      name: 'Chicken Burrito',
+      price: 12.75,
+      description:
+        'Grilled chicken, rice, beans, pico de gallo, and cheese wrapped in a warm flour tortilla.',
+      image:
+        'https://i.pinimg.com/474x/9a/c8/ae/9ac8aea88b6d44d44927830ac0ae01fc.jpg',
+    },
+  ],
   mainDishes: [
     {
       name: 'Chicken Fajitas',
@@ -58,14 +102,6 @@ const productsMenu = {
       image:
         'https://i.pinimg.com/474x/4c/cc/3c/4ccc3cbe438988594e183557322d3afa.jpg',
     },
-    {
-      name: 'El Reparo Fajitas',
-      price: 22.5,
-      description:
-        'A combination of grilled chicken, steak, and shrimp served with sautéed onions and bell peppers. Accompanied by rice, beans, guacamole, sour cream, and tortillas.',
-      image:
-        'https://i.pinimg.com/474x/76/42/f4/7642f45ce2c5fdff91dc83a94f71fd61.jpg',
-    },
   ],
   desserts: [
     {
@@ -77,28 +113,12 @@ const productsMenu = {
         'https://i.pinimg.com/474x/fd/26/9f/fd269faf6f7ea3aa72b422fc6a546386.jpg',
     },
     {
-      name: 'Fried Ice Cream',
-      price: 8.5,
-      description:
-        'Vanilla ice cream coated in a crispy shell, drizzled with honey and chocolate syrup.',
-      image:
-        'https://i.pinimg.com/474x/0c/81/d8/0c81d83426b576fa86868dfd8d5ef030.jpg',
-    },
-    {
       name: 'Flan',
       price: 6.5,
       description:
         'Traditional Mexican caramel custard dessert with a rich, creamy texture.',
       image:
         'https://i.pinimg.com/474x/6a/66/d7/6a66d7c07a831f1eb9ccfcfeeb394788.jpg',
-    },
-    {
-      name: 'Sopapillas',
-      price: 6.0,
-      description:
-        'Puffy fried pastries dusted with powdered sugar and served with honey.',
-      image:
-        'https://i.pinimg.com/474x/ea/ae/39/eaae39998a8cc9e09a224919b9fae97f.jpg',
     },
   ],
   drinks: [
@@ -111,13 +131,6 @@ const productsMenu = {
         'https://i.pinimg.com/474x/62/df/b7/62dfb7e8c777f19c7990f64d7158a921.jpg',
     },
     {
-      name: 'Jamaica',
-      price: 3.5,
-      description: 'Sweet hibiscus flower iced tea, served chilled.',
-      image:
-        'https://i.pinimg.com/474x/21/0d/a3/210da38ba47ad0d825867de4e4f14222.jpg',
-    },
-    {
       name: 'Margarita',
       price: 8.0,
       description:
@@ -125,13 +138,49 @@ const productsMenu = {
       image:
         'https://i.pinimg.com/474x/bd/e6/9a/bde69a1d163024d82038480cfd4b328b.jpg',
     },
+  ],
+  specialDishes: [
     {
-      name: 'Mexican Coke',
-      price: 4.0,
+      name: 'Molcajete Mixto',
+      price: 25.5,
       description:
-        'Coca-Cola made with real cane sugar, served in a glass bottle.',
+        'A sizzling stone bowl filled with grilled chicken, steak, shrimp, chorizo, and nopales. Served with tortillas, rice, and beans.',
       image:
-        'https://i.pinimg.com/736x/ab/51/ee/ab51eefb1d254062e46dc3600c9ea4c4.jpg',
+        'https://i.pinimg.com/474x/ab/62/3c/ab623c10c7e02bfcfdbb73a2beedb1bf.jpg',
+    },
+    {
+      name: 'Birria Tacos',
+      price: 18.75,
+      description:
+        'Slow-cooked beef birria tacos served with melted cheese and consommé for dipping.',
+      image:
+        'https://i.pinimg.com/474x/53/47/fd/5347fde91c50c0570813d475fef193c4.jpg',
+    },
+  ],
+  breakfast: [
+    {
+      name: 'Chilaquiles',
+      price: 10.5,
+      description:
+        'Crispy tortilla chips topped with red or green salsa, fried eggs, queso fresco, and sour cream.',
+      image:
+        'https://i.pinimg.com/474x/99/bb/e8/99bbe8e151ad21608dbd1dafc9d34e6f.jpg',
+    },
+    {
+      name: 'Huevos Rancheros',
+      price: 12.0,
+      description:
+        'Two fried eggs served on corn tortillas with ranchero sauce, beans, and avocado slices.',
+      image:
+        'https://i.pinimg.com/474x/67/fa/28/67fa280b898be286013d9043c7a9514a.jpg',
+    },
+    {
+      name: 'Breakfast Burrito',
+      price: 9.5,
+      description:
+        'Flour tortilla filled with scrambled eggs, cheese, beans, and chorizo. Served with salsa.',
+      image:
+        'https://i.pinimg.com/736x/19/c9/8b/19c98b090034f88205aa40f8d2c77f69.jpg',
     },
   ],
 }

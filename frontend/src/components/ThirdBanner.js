@@ -1,6 +1,7 @@
 import React from 'react'
 import bg from '../assets/bg1.svg'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 const ThirdBanner = () => {
   return (
     <div className='third-banner section-center'>
@@ -20,25 +21,24 @@ const ThirdBanner = () => {
         >
           <img src={bg} alt='SVG Image' className='secondbanner-svg-image' />
         </motion.div>
-        <h3>Lobster Tortellini</h3>
+        <h3>"El Reparo’s Signature Dish – A Taste of Tradition!"</h3>
         <p>
-          Indulge in our Lobster Tortellini, a rich and flavorful dish that
-          brings the best of the sea to your plate. Our handmade tortellini are
-          delicately filled with succulent lobster meat, blended with a touch of
-          ricotta cheese and aromatic herbs for a creamy, savory bite. The pasta
-          is then tossed in a luxurious butter-garlic sauce, infused with white
-          wine, shallots, and a hint of lemon zest, creating the perfect balance
-          of richness and freshness. Finished with a sprinkle of grated Parmesan
-          and fresh parsley, this dish is a true delight for seafood lovers.
-          Pair it with a glass of chilled white wine or a tropical cocktail for
-          the ultimate dining experience! 🍷✨
+          Savor the rich and authentic flavors of Mexico with our signature dish
+          at El Reparo Mexican Grill & Cantina. Made with the freshest
+          ingredients, bold spices, and time-honored recipes, each bite brings a
+          perfect balance of flavor, heat, and tradition. Whether you're craving
+          sizzling fajitas, cheesy enchiladas, or tender carne asada, our
+          special dish is a must-try for true Mexican food lovers!"
         </p>
         <div className='price'>
           <span className='original-price'>$40.00</span>
           <span className='discounted-price'>$20.00</span>
         </div>
 
-        <button className='btn'>View All Menu</button>
+        <Link to={'/menus'}>
+          {' '}
+          <button className='btn'>View All Menu</button>
+        </Link>
       </div>
     </div>
   )

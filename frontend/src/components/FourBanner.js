@@ -3,7 +3,7 @@ import React from 'react'
 const FourBanner = () => {
   return (
     <section className='fourbanner-section'>
-      {/* Background Image */}
+     
       <div className='fourbanner-bg'>
         <img
           src='https://lh3.googleusercontent.com/p/AF1QipPM8mwVPGPz1gljW2DwjgqB7Osbi5BdFA-ssX7s=s1360-w1360-h1020' // Replace with your image

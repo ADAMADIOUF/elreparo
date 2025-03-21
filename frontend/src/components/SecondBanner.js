@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import bg from '../assets/bg1.svg'
 import imageOne from '../assets/imageOne.jpg'
 import imageTwo from '../assets/imageTwo.jpg'
+import { Link } from 'react-router-dom'
 
 const SecondBanner = () => {
   return (
@@ -64,9 +65,9 @@ const SecondBanner = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            <a href='#read-more' className='secondbanner-btn btn'>
+            <Link to='/about-us' className='secondbanner-btn btn'>
               Read More
-            </a>
+            </Link>
           </motion.div>
         </div>
         <div className='secondbanner-image-section'>
