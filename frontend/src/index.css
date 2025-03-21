@@ -235,7 +235,7 @@ p {
 /* Navbar */
 .navbar {
   position: absolute; /* Fix navbar at the top */
-  top: 2rem;
+  top: 8rem;
   left: 0;
   width: 100%;
   z-index: 1000; /* Ensure it's above other elements */
@@ -404,7 +404,16 @@ p {
   background: var(--clr-primary-3);
   color: var(--clr-black) !important;
 }
+@media (min-width:768px) {
+  .navbar {
+  
+  top: 3rem;
+  left: 0;
+  
+}
 
+
+}
 /* Slider */
 .slider {
   position: relative;
@@ -1698,6 +1707,7 @@ p {
 /* Larger Screens */
 @media (min-width: 768px) {
   .contact-info {
+    display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns layout for larger screens */
     gap: 2rem;
   }
@@ -1705,10 +1715,18 @@ p {
   .contact-item {
     padding: 1.5rem;
   }
-  .home-contact{
+
+  .home-contact {
     display: flex;
+    flex-direction: column; /* Makes it stack vertically on larger screens */
+  }
+
+  .reservation-row,
+  .contact-home-row {
+    margin-bottom: 2rem; /* Space between the reservation and contact sections */
   }
 }
+
 /* Main container styles */
 .why-choose-us {
   padding: 50px;
