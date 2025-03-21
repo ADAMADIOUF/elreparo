@@ -19,6 +19,8 @@ import ReservationPage from './pages/ReservationPage';
 import BreafastPage from './pages/BreafastPage';
 import AppetizersPage from './pages/AppetizersPage';
 import DrinkPage from './pages/DrinkPage';
+import { Provider } from 'react-redux'
+import { store } from './store'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -36,9 +38,12 @@ const router = createBrowserRouter(
 )
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+    <Provider store={store}>
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
+  </Provider>
 )
 
 
