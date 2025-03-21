@@ -24,7 +24,7 @@ const slides = [
       'https://i.pinimg.com/736x/32/d8/5c/32d85ce21ababbe7085d2e956711fa10.jpg',
     title: 'A Fiesta of Flavors – Fresh, Bold, and Authentic!',
     description:
-      'Experience the heart of Mexico on every plate! From zesty limes to aromatic parsley and fiery peppers, our dishes are crafted with fresh ingredients and bold flavors. Join us for a feast that ignites your taste buds and celebrates tradition in every bite.',
+      'Experience the heart of Mexico in every dish! From zesty limes to aromatic parsley and fiery peppers, we craft each plate with fresh ingredients and bold flavors.',
     buttonText: 'Book a Table',
     buttonLink: '/reservation',
   },
