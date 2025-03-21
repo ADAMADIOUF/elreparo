@@ -22,8 +22,8 @@ const slides = [
   {
     image:
       'https://i.pinimg.com/736x/32/d8/5c/32d85ce21ababbe7085d2e956711fa10.jpg',
-    title: 'A Fiesta of Flavors – Fresh, Bold, and Authentic!',
-    description: 'Taste Mexico in every dish – fresh, bold, and flavorful!',
+    title: 'Bold, Fresh, Authentic Flavors!',
+    description: 'Taste Mexico – Fresh, Bold, Flavorful!',
     buttonText: 'Book a Table',
     buttonLink: '/reservation',
   },
