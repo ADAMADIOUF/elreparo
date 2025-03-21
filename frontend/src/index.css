@@ -2222,6 +2222,7 @@ p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 /* HeroUsable */
+
 .hero-usuable {
   position: relative;
   background-position: center;
@@ -2237,7 +2238,7 @@ p {
 
 .hero-usuable-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 5rem auto;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
   border-radius: 10px;
