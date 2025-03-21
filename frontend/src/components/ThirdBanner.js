@@ -19,7 +19,7 @@ const ThirdBanner = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <img src={bg} alt='SVG Image' className='secondbanner-svg-image' />
+          <img src={bg} alt='' className='secondbanner-svg-image' />
         </motion.div>
         <h3>"El Reparo’s Signature Dish – A Taste of Tradition!"</h3>
         <p>

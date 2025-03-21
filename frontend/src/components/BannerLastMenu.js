@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const BannerLastMenu = () => {
   return (
@@ -6,14 +7,15 @@ const BannerLastMenu = () => {
       <div className='banner-last-menu-container'>
         <div className='banner-last-menu-column'>
           <div className='banner-last-menu-item'>
-            <h3 className='banner-last-menu-title'>Best Menu</h3>
-            <p className='banner-last-menu-description'>Special Dishes</p>
+            <h3 className='banner-last-menu-title'>Our Signature Dishes</h3>
+            <p className='banner-last-menu-description'>Taste the Best</p>
             <p className='banner-last-menu-text'>
-              Lorem Ipsum is simply dummy printing.
+              Enjoy our carefully crafted dishes made with the finest
+              ingredients.
             </p>
-            <a href='#' className='banner-last-menu-view'>
+            <Link to='/menus' className='banner-last-menu-view'>
               View Menu
-            </a>
+            </Link>
           </div>
 
           <div className='banner-last-menu-item banner-last-menu-img-item'>
@@ -26,14 +28,15 @@ const BannerLastMenu = () => {
           </div>
 
           <div className='banner-last-menu-item'>
-            <h3 className='banner-last-menu-title'>Selected</h3>
-            <p className='banner-last-menu-description'>Chef Choice</p>
+            <h3 className='banner-last-menu-title'>Chef's Specials</h3>
+            <p className='banner-last-menu-description'>Handpicked for You</p>
             <p className='banner-last-menu-text'>
-              Dummy printing lorem Ipsum simply.
+              Experience a delightful blend of flavors with our chef’s top
+              recommendations.
             </p>
-            <a href='#' className='banner-last-menu-view'>
+            <Link to='/menus' className='banner-last-menu-view'>
               View Menu
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -49,14 +52,14 @@ const BannerLastMenu = () => {
           </div>
 
           <div className='banner-last-menu-item'>
-            <h3 className='banner-last-menu-title'>Latest</h3>
-            <p className='banner-last-menu-description'>Upcoming Events</p>
+            <h3 className='banner-last-menu-title'>Exciting Events</h3>
+            <p className='banner-last-menu-description'>Join the Celebration</p>
             <p className='banner-last-menu-text'>
-              Simply dummy printing and setting.
+              Be part of our special events with great food, music, and company.
             </p>
-            <a href='#' className='banner-last-menu-event'>
+            <Link to='/contact' className='banner-last-menu-event'>
               Join Event
-            </a>
+            </Link>
           </div>
 
           <div className='banner-last-menu-item banner-last-menu-img-item'>

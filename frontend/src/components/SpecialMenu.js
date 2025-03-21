@@ -47,7 +47,7 @@ const SpecialMenu = () => {
             >
               <img
                 src={bg}
-                alt='SVG Image'
+                alt=''
                 className='secondbanner-svg-image'
               />
             </motion.div>

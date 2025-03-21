@@ -4,6 +4,7 @@ import path from 'path'
 
 import connectDB from './config/db.js'
 import contactRoute from './routes/ContactRoute.js'
+import reservationRoute from './routes/reservationRoute.js'
 dotenv.config()
 connectDB()
 const app = express()
@@ -11,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 const port = process.env.PORT || 5000
 app.use('/api/form/contact', contactRoute)
+app.use('/api/form/reservation', reservationRoute)
 
 const __dirname = path.resolve()
 if (process.env.NODE_ENV === 'production') {

@@ -36,7 +36,7 @@ const reservationSchema = new mongoose.Schema(
 // After a reservation is saved, send a confirmation email
 reservationSchema.post('save', async function (doc) {
   const emailOptions = {
-    to: 'adamadiouf2017.com', // Replace with your email or recipient email
+    to: 'Elreparond@yahoo.com', // Replace with your email or recipient email
     subject: 'New Reservation Confirmation',
     message: `
       Reservation Details:

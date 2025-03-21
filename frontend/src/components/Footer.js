@@ -64,7 +64,7 @@ const Footer = () => {
               <FaFacebookF size={20} />
             </a>
             <a
-              href='#'
+              href='/'
               target='_blank'
               rel='noopener noreferrer'
               className='footer-social-icon'
@@ -72,7 +72,7 @@ const Footer = () => {
               <FaInstagram size={20} />
             </a>
             <a
-              href='#'
+              href='/'
               target='_blank'
               rel='noopener noreferrer'
               className='footer-social-icon'

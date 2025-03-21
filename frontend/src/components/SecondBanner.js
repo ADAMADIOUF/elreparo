@@ -17,7 +17,7 @@ const SecondBanner = () => {
           >
             Our Story
           </motion.h2>
-          <img src={bg} alt='SVG Image' className='secondbanner-svg-image' />
+          <img src={bg} alt='' className='secondbanner-svg-image' />
           <motion.div
             className='secondbanner-svg-container'
             initial={{ opacity: 0, scale: 0.5 }}

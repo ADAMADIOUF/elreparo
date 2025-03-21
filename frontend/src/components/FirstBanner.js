@@ -25,7 +25,7 @@ const FirstBanner = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <img src={bg} alt='SVG Image' className='secondbanner-svg-image' />
+          <img src={bg} alt='' className='secondbanner-svg-image' />
         </motion.div>
 
         <motion.h2
