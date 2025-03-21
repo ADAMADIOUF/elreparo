@@ -1,8 +1,15 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
-
 import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
+
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <footer className='footer'>
       <div className='footer-container'>
@@ -17,32 +24,40 @@ const Footer = () => {
           <h3 className='footer-links-title'>Quick Links</h3>
           <ul className='footer-links'>
             <li>
-              <Link to='/' className='footer-link'>
+              <Link to='/' className='footer-link' onClick={scrollToTop}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to='/menus' className='footer-link'>
+              <Link to='/menus' className='footer-link' onClick={scrollToTop}>
                 Menu
               </Link>
             </li>
             <li>
-              <Link to='/about-us' className='footer-link'>
+              <Link
+                to='/about-us'
+                className='footer-link'
+                onClick={scrollToTop}
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link to='/chefs' className='footer-link'>
+              <Link to='/chefs' className='footer-link' onClick={scrollToTop}>
                 Our Chefs
               </Link>
             </li>
             <li>
-              <Link to='/reservation' className='footer-link'>
+              <Link
+                to='/reservation'
+                className='footer-link'
+                onClick={scrollToTop}
+              >
                 Reservation
               </Link>
             </li>
             <li>
-              <Link to='/contact' className='footer-link'>
+              <Link to='/contact' className='footer-link' onClick={scrollToTop}>
                 Contact
               </Link>
             </li>
